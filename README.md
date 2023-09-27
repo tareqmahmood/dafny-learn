@@ -10,12 +10,13 @@ http://dafny.org/dafny/OnlineTutorial/guide.html
 ### Method
 * Dafny **will not** discover properties of a method on its own.
 * If we call a method `A` from inside another method `B`, the only thing Dafny knows in `B` about the value returned from  `A` is what the **postconditions** say about it, and nothing more.
-
+* `lemma` is a ghost method.
 
 ### Functions
 * Dafny will discover properties of a function on its own.
 * A function body must consist of exactly one expression, with the correct type.
-* Unlike methods, functions can appear in expressions. 
+* Unlike methods, functions can appear in expressions.
+* `predicate` is a function that returns boolean.
 
 ### Loop
 * When you specify an invariant, Dafny proves two things: 

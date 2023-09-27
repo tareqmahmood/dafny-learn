@@ -7,8 +7,19 @@ I will list some keypoints that I learned.
 ## R01: Getting Started with Dafny: A Guide
 http://dafny.org/dafny/OnlineTutorial/guide.html
 
-### Invoking Method inside a Method
-If we call a method `A` from inside another method `B`, the only thing Dafny knows in `B` about the value returned from  `A` is what the **postconditions** say about it, and nothing more.
+### Method
+* Dafny **will not** discover properties of a method on its own.
+* If we call a method `A` from inside another method `B`, the only thing Dafny knows in `B` about the value returned from  `A` is what the **postconditions** say about it, and nothing more.
+
 
 ### Functions
-A function body must consist of exactly one expression, with the correct type.
+* Dafny will discover properties of a function on its own.
+* A function body must consist of exactly one expression, with the correct type.
+* Unlike methods, functions can appear in expressions. 
+
+### Loop
+* When you specify an invariant, Dafny proves two things: 
+    1. the invariant holds upon entering the loop
+    2. it is preserved by the loop.
+        * Remind that, iterating variable can change within the loop before termination logic triggers 
+* Dafny **will not** discover properties of a loop on its own (Unless told by invariant).

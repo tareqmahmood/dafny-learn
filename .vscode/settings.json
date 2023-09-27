@@ -1,0 +1,12 @@
+{
+    "todohighlight.keywords": [
+        {
+            "text": "EXPLAIN:",
+            "color": "#FFFFFF",
+            "backgroundColor": "Green",
+            "isWholeLine": false
+        }
+    ],
+    "editor.fontSize": 16,
+    "dafny.automaticVerification": "onsave",
+}

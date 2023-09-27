@@ -36,3 +36,16 @@ method Abs(x: int) returns (y: int)
         return x;
     }
 }
+
+
+// Ghost
+ghost function Double(val:int) : int
+{
+    2 * val
+}
+
+method TestDouble(val: int) returns (val2:int)
+    ensures val2 == Double(val)
+{
+    val2 := 2 * val;
+}

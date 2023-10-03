@@ -26,4 +26,7 @@ http://dafny.org/dafny/OnlineTutorial/guide.html
 * Dafny **will not** discover properties of a loop on its own (Unless told by invariant).
 
 ### Quantifiers
-* 
+* A quantifier introduces a temporary name for each element of the set it is considering. 
+* This is called the bound variable.
+* _vacuous truth_: `forall k :: p(k) ==> q(k)`
+* Sometimes, try to write function `ensures` and loop `invariants` in a similar mananer. 

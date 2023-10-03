@@ -20,7 +20,10 @@ http://dafny.org/dafny/OnlineTutorial/guide.html
 
 ### Loop
 * When you specify an invariant, Dafny proves two things: 
-    1. the invariant holds upon entering the loop
-    2. it is preserved by the loop.
+    1. the invariant holds _upon entering_ the loop
+    2. it is preserved _after every execution_ of the loop.
         * Remind that, iterating variable can change within the loop before termination logic triggers 
 * Dafny **will not** discover properties of a loop on its own (Unless told by invariant).
+
+### Quantifiers
+* 

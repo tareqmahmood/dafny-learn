@@ -30,3 +30,16 @@ http://dafny.org/dafny/OnlineTutorial/guide.html
 * This is called the bound variable.
 * _vacuous truth_: `forall k :: p(k) ==> q(k)`
 * Sometimes, try to write function `ensures` and loop `invariants` in a similar mananer. 
+
+### Predicates
+* Function that returns `bool`.
+* Specify a one-liner property, e.g. if an array is sorted.
+* The use of predicates makes our code shorter.
+
+### Framing
+* If a function parameter is a memory location (e.g. array), use `reads` to allow function to read that.
+* Parameters to the function that are not memory locations do not need that to be declared.
+* **Does not need `reads`:** Sets, sequences, and multisets are value types, and are treated like integers or local variables. 
+* **Needs `reads`:** Arrays and objects are reference types, and they are stored on the heap 
+* Methods do not need `reads`, they can read everything.
+* Methods need `modifies` to modify a memory location.
